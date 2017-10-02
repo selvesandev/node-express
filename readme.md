@@ -49,3 +49,19 @@ app.get('/*', function (request, response) {
 
 ```
 
+## Templates
+Express comes with two options for templating.
+* Jade (indentation)
+* EJS (embeddable javascript)
+
+`npm install ejs --save`  
+
+
+```node js
+app.set('view engine', 'ejs');
+
+app.get('/', function (request, response) {
+    response.render('default'); // this will automatically look for your file in ./views/default.ejs
+});
+
+```
