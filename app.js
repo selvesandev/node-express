@@ -10,6 +10,10 @@ app.get('/', function (request, response) {
     });
 });
 
+app.get('*', function (req, res) {
+    res.send('404 not found');
+});
+
 let server = app.listen(3000, function () {
     console.log('listing to port 3000');
 });

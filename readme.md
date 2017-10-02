@@ -81,10 +81,29 @@ app.get('/', function (request, response) {
 </ul>
 
 ```
-
+    
 
 If your templates are not on `views` folder
 ```
 app.set('views',__dirname+'/folder_name');
 __dirname is a global variable that displays the name of the current foler where the app.js file is.
+```
+
+#### Partials
+Dividing the common contents on the page like header and foooter into separate file. 
+
+```node js
+    <% include partials/page/head.ejs %>
+
+```
+
+#### Locals and Conditional
+```nodejs
+    app.set.pagetitle="Awesome website."
+    //now this variable will be available locally to every single page.    
+    
+        <%
+        if(typeof users == undefined){
+        %>
+    
 ```

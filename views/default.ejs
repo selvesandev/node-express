@@ -1,24 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+    <% include partials/page/head.ejs %>
 </head>
 <body>
+<div class="container">
 
-<h1><%= title %></h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Accusantium aliquam beatae blanditiis doloremque est eum
-    expedita fugit harum id incidunt, ipsum libero molestiae nihil quam quos
-    ratione sed suscipit veritatis?</p>
+    <% include partials/page/header.ejs %>
 
-<ul>
-    <% for(var i = 0;i < users.length;i++){ %>
-    <li>
-        <%= users[i] %>
-    </li>
+    <h2><%= title %></h2>
+    <hr>
+    <%
+    if(typeof users == undefined){
+    %>
+    <ul>
+        <% for(var i = 0;i < users.length;i++){ %>
+        <li>
+            <%= users[i] %>
+        </li>
+        <% } %>
+    </ul>
+
     <% } %>
-</ul>
+
+    <% include partials/page/footer.ejs %>
+</div><!--end of div container-->
+
+<% include partials/page/js.ejs %>
 
 </body>
 </html>
