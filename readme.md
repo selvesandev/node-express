@@ -35,3 +35,17 @@ let server = app.listen(3000, function () {
     console.log('listing to port 3000');
 });
 ```
+
+## Routes
+```nodejs
+app.get('/home/:name?/:title?', function (request, response) {
+    let name=request.params.name;
+    response.send('Home page '+name);
+});
+
+app.get('/*', function (request, response) {
+    response.send('Bad Route');
+});
+
+```
+
