@@ -107,3 +107,38 @@ Dividing the common contents on the page like header and foooter into separate f
         %>
     
 ```
+
+### Routes
+
+```nodejs
+
+routes/
+  cars.js
+  index.js
+  
+```
+animals.js
+```nodejs
+var express = require('express')
+  , router = express.Router()
+
+// Domestic animals page
+router.get('/domestic', function(req, res) {
+  res.send('Cow, Horse, Sheep')
+})
+
+module.exports = router
+
+```
+
+app.js
+```nodejs
+
+router.use('/animals', require('./animals'))
+
+```
+
+Available Routes
+
+* /
+* /animals/domestic

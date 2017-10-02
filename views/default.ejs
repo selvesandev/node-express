@@ -11,7 +11,7 @@
     <h2><%= title %></h2>
     <hr>
     <%
-    if(typeof users == undefined){
+    if(typeof users != undefined){
     %>
     <ul>
         <% for(var i = 0;i < users.length;i++){ %>
@@ -22,6 +22,19 @@
     </ul>
 
     <% } %>
+
+    <hr>
+    <h3>Routes.</h3>
+    <ul>
+        <li>/</li>
+        <li>/about</li>
+        <li>/animals/domestic</li>
+        <li>/animals/wild</li>
+        <li>/cars/brands</li>
+        <li>/cars/models</li>
+    </ul>
+
+    <hr>
 
     <% include partials/page/footer.ejs %>
 </div><!--end of div container-->
