@@ -4,7 +4,10 @@ let app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', function (request, response) {
-    response.render('default');
+    response.render('default', {
+        title: 'Home',
+        users: ['selvesan', 'ray', 'james']
+    });
 });
 
 let server = app.listen(3000, function () {

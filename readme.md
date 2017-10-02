@@ -56,12 +56,35 @@ Express comes with two options for templating.
 
 `npm install ejs --save`  
 
-
+./app.js
 ```node js
 app.set('view engine', 'ejs');
 
 app.get('/', function (request, response) {
-    response.render('default'); // this will automatically look for your file in ./views/default.ejs
+    response.render('default', {
+        title: 'Home',
+        users: ['selvesan', 'ray', 'james']
+    });
 });
 
+```
+./views/default.ejs
+```html
+<h1><%= title %></h1>
+
+<ul>
+    <% for(var i = 0;i < users.length;i++){ %>
+    <li>
+        <%= users[i] %>
+    </li>
+    <% } %>
+</ul>
+
+```
+
+
+If your templates are not on `views` folder
+```
+app.set('views',__dirname+'/folder_name');
+__dirname is a global variable that displays the name of the current foler where the app.js file is.
 ```
