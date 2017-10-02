@@ -2,10 +2,13 @@
   "name": "node-express",
   "version": "1.0.0",
   "description": "Node with Express App",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "selvesan",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1"
+  }
 }
