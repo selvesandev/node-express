@@ -142,3 +142,11 @@ Available Routes
 
 * /
 * /animals/domestic
+
+
+## Express Generator
+Create a complete project boilerplate with express-generator.  
+`express -e project_name`  
+`cd project_name`  
+`npm install`  
+`npm start`
